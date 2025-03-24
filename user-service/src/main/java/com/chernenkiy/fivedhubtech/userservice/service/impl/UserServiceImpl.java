@@ -74,9 +74,39 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public UserDto updateUserByName(String name, UserDto userDto) {
+        return null;
+    }
+
+    @Override
+    public UserDto updateUserBySurname(String Surname, UserDto userDto) {
+        return null;
+    }
+
+    @Override
+    public UserDto updateUserByBirthdate(String Birthday, UserDto userDto) {
+        return null;
+    }
+
+    @Override
     public void deleteUser (Long id) {
         UserEntity userEntity = userRepository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException(id));
         userRepository.delete(userEntity);
+    }
+
+    @Override
+    public void deleteUserByName(String name) {
+
+    }
+
+    @Override
+    public void deleteUserBySurname(String Surname) {
+
+    }
+
+    @Override
+    public void deleteUserByBirthdate(String Birthday) {
+
     }
 }
